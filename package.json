@@ -1,0 +1,30 @@
+{
+  "name": "gitbook-pandoc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "ndeploy": "bash ./bin/build.sh ndeploy",
+    "build": "bash ./bin/build.sh release",
+    "serve": "bash ./bin/build.sh serve",
+    "test": "bash ./bin/build.sh"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "del": "2.2.2",
+    "gitbook-cli": "^2.3.0",
+    "gitbook-plugin-theme-ncpug": "1.3.1",
+    "gitbook-plugin-theme-userguide": "1.2.0",
+    "gitbook-unicode-converter": "^2.0.0",
+    "gulp": "3.9.1",
+    "gulp-pandoc-writer": "1.0.2",
+    "gulp-run": "1.7.1",
+    "lodash": "4.17.4"
+  },
+  "dependencies": {
+    "gitbook-plugin-pandoc": "^1.0.7",
+    "highlight": "^0.2.4"
+  }
+}
