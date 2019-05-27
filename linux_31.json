@@ -1,0 +1,28 @@
+{
+  "variables": {
+    "ncp_access_key": "Z0DO4RNEBWLt6LcRJWfK",
+    "ncp_secret_key": "QtcY5h5UlskKxZ6TCzQjEhEcwOgO4MDuQra0KTnu"
+  },
+  "builders": [
+    {
+      "type": "ncp",
+      "access_key": "{{user `ncp_access_key`}}",
+      "secret_key": "{{user `ncp_secret_key`}}",
+
+      "os_type": "Linux",
+      "server_image_product_code": "SPSW0LINUX000026",
+      "server_product_code": "SPSVRSTAND000029",
+      "server_image_name": "packer-test-{{timestamp}}",
+      "server_image_description": "server description",
+
+      "communicator": "ssh",
+      "ssh_username": "root"
+    }
+  ],
+  "provisioners": [
+    {
+      "type": "shell",
+      "inline": ["ls -al /"]
+    }
+  ]
+}
